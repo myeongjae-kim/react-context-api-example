@@ -14,9 +14,9 @@ export const createMutableContext = <T,>(initialContext: T) => {
     return <InnerContext.Provider value={{context, updateContext}}>{children}</InnerContext.Provider>
   }
 
-  const useContext = () => {
+  const useIt = () => {
     return React.useContext(InnerContext)
   }
 
-  return {Provider, useContext};
+  return {Provider, useIt};
 }

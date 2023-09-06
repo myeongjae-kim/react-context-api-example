@@ -6,7 +6,7 @@ type ImmutableContext<T> = {
 }
 
 export const createImmutableContext = <T,>(initialContext: T) => {
-  const {Provider, useContext} = createMutableContext(initialContext)
+  const {Provider, useIt} = createMutableContext(initialContext)
 
-  return {Provider, useContext: () => ({context: useContext().context} satisfies ImmutableContext<T>)};
+  return {Provider, useIt: () => ({context: useIt().context} satisfies ImmutableContext<T>)};
 }

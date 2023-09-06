@@ -4,7 +4,7 @@ import React from 'react';
 import { FooContext } from "@/app/foo/FooContext";
 
 const FooTemplate = (): React.JSX.Element => {
-  const {context: foo, updateContext: setFoo} = FooContext.useContext()
+  const {context: foo, updateContext: setFoo} = FooContext.useIt()
 
   return (
     <div className={'flex flex-col justify-center'}>
