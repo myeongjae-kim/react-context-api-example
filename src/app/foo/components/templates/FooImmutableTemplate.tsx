@@ -1,14 +1,12 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 import { FooContextImmutable } from "@/app/foo/FooContextImmutable";
 
 const FooTemplate = (): React.JSX.Element => {
-  const {context: foo} = FooContextImmutable.useIt()
+  const { context: foo } = FooContextImmutable.useIt();
 
-  return (
-      <div>FooImmutableTemplate: {foo}</div>
-  );
+  return <div>FooImmutableTemplate: {foo}</div>;
 };
 
 export default FooTemplate;

@@ -1,3 +1,3 @@
-export type Foo = 'default' | 'bar' | 'baz';
+export type Foo = "default" | "bar" | "baz";
 
-export const fooDefault = (): Foo => 'default';
+export const fooDefault = (): Foo => "default";
