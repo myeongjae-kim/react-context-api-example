@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { useFooContext } from "@/app/foo/FooContext";
+import { FooContextAlter } from "@/app/foo/FooContext";
 
 const FooTemplate = (): React.JSX.Element => {
-  const {foo, setFoo} = useFooContext()
+  const {state: foo, setState: setFoo} = FooContextAlter.useState()
 
   return (
     <div className={'flex flex-col justify-center'}>

@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { FooContext } from "@/app/foo/FooContext";
+import { FooContextAlter } from "@/app/foo/FooContext";
 
 const ClientDependencyContainer = ({children}: React.PropsWithChildren): React.JSX.Element => {
   return (
-    <FooContext>{children}</FooContext>
+    <FooContextAlter.Provider>{children}</FooContextAlter.Provider>
   );
 };
 

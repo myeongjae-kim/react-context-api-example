@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { useFooContext } from "@/app/foo/FooContext";
+import { FooContextAlter } from "@/app/foo/FooContext";
 
 const FooTemplate = (): React.JSX.Element => {
-  const {foo} = useFooContext()
+  const {state: foo} = FooContextAlter.useState()
 
   return (
     <div>
