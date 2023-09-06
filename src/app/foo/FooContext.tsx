@@ -2,6 +2,6 @@
 
 import React from "react";
 import { Foo, fooDefault } from "@/app/foo/Foo";
-import { createStateContext } from "@/app/common/createStateContext";
+import { createMutableContext } from "@/app/common/createMutableContext";
 
-export const FooContextAlter = createStateContext<Foo>(fooDefault());
+export const FooContextAlter = createMutableContext<Foo>(fooDefault());
