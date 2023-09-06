@@ -1,11 +1,16 @@
 'use client';
 
 import React from 'react';
-import { FooContextAlter } from "@/app/foo/FooContext";
+import { FooContext } from "@/app/foo/FooContext";
+import { FooContextImmutable } from "@/app/foo/FooContextImmutable";
 
 const ClientDependencyContainer = ({children}: React.PropsWithChildren): React.JSX.Element => {
   return (
-    <FooContextAlter.Provider>{children}</FooContextAlter.Provider>
+    <FooContext.Provider>
+      <FooContextImmutable.Provider>
+        {children}
+      </FooContextImmutable.Provider>
+    </FooContext.Provider>
   );
 };
 

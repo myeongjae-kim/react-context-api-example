@@ -1,12 +1,12 @@
 import React, { Dispatch, SetStateAction } from "react";
 
-type MutableStateContext<T> = {
+type MutableContext<T> = {
   context: T;
   updateContext: Dispatch<SetStateAction<T>>
 }
 
 export const createMutableContext = <T,>(initialContext: T) => {
-  const InnerContext = React.createContext<MutableStateContext<T>>({context:initialContext, updateContext: () => {}});
+  const InnerContext = React.createContext<MutableContext<T>>({context:initialContext, updateContext: () => {}});
 
   const Provider = ({children}: React.PropsWithChildren) => {
     const [context, updateContext] = React.useState<T>(initialContext);
