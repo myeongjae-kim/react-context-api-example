@@ -1,0 +1,9 @@
+# Ignore artifacts:
+.next
+build
+coverage
+**/*.json
+**/*.css
+**/*.md
+**/*.yaml
+**/*.yml
